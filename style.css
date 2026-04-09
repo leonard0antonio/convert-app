@@ -1,0 +1,128 @@
+/* Variáveis de Cores Baseadas no Layout Escuro */
+:root {
+    --bg-color: #0b0914; /* Fundo principal escuro */
+    --card-bg: #1a1625; /* Fundo do formulário */
+    --card-result-bg: #231b42; /* Fundo do resultado */
+    --primary-color: #4f46e5; /* Roxo/Azul do botão */
+    --primary-hover: #4338ca;
+    --text-main: #ffffff;
+    --text-muted: #9ca3af;
+    --border-color: #2d263b;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px; /* Mantém o design compacto como na imagem */
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+/* Cartão Principal */
+.card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden; /* Para manter o border-radius com as seções internas */
+}
+
+.form-section {
+    background-color: var(--card-bg);
+    padding: 24px;
+}
+
+/* Grupos de Input */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.input-group input, .input-group select {
+    background-color: #120e1a;
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.input-group input:focus, .input-group select:focus {
+    border-color: var(--primary-color);
+}
+
+/* Botão */
+.btn-primary {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Seção de Resultado */
+.result-section {
+    background-color: var(--card-result-bg);
+    padding: 24px;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
+
+.result-section.hidden {
+    display: none; /* Classe utilitária para esconder a div */
+}
+
+#exchange-rate {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+#final-result {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
